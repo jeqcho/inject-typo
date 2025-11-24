@@ -28,8 +28,9 @@ pip install git+https://github.com/jeqcho/inject-typo.git
 
 | Strength | Output |
 |----------|--------|
-| 0.00 | The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for testing purposes. |
-| 0.01 | The quick brown foxjumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for teating purposes. |
+| 0.000 | The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for testing purposes. |
+| 0.005 | The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for teating purposes. |
+| 0.010 | The quick brown foxjumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for teating purposes. |
 | 0.02 | The quick brown foxj umps over the lazy dog. This sentence contains every letter of the alphabet andqis commonly used for tetkng purposes. |
 | 0.03 | Teh quickbrpwn foxj umps over the lazy dog. This sentence contains every letter of the alphabet andqis commonly used for tetkng purposes. |
 | 0.04 | Thbe quickb rwn foxgjumps over the lazy dog. This sentence containse very letter of the alphabet andqis commonly used for tetkng purposes. |
