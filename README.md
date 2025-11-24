@@ -13,6 +13,45 @@ The goal is to produce human-like typos based on empirically observed distributi
 
 The package must follow a **rule-based typo model** incorporating realistic error types, keyboard-adjacency constraints, and stable probabilities.
 
+## Installation
+
+```bash
+pip install git+https://github.com/jeqcho/inject-typo.git
+```
+
+## Demo
+
+**Original text:**
+> The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for testing purposes.
+
+### Fine-grained control (0.00 to 0.10)
+
+| Strength | Output |
+|----------|--------|
+| 0.00 | The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for testing purposes. |
+| 0.01 | The quick brown foxjumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for teating purposes. |
+| 0.02 | The quick brown foxj umps over the lazy dog. This sentence contains every letter of the alphabet andqis commonly used for tetkng purposes. |
+| 0.03 | Teh quickbrpwn foxj umps over the lazy dog. This sentence contains every letter of the alphabet andqis commonly used for tetkng purposes. |
+| 0.04 | Thbe quickb rwn foxgjumps over the lazy dog. This sentence containse very letter of the alphabet andqis commonly used for tetkng purposes. |
+| 0.05 | Thge quickvbrokwn foxj umps over the lazy dg. This sentence containsgevery letter of the aplhabet andqis commonly used for tetkng purposes. |
+| 0.06 | Tye quickqbrkwn fox wjumps over the lazy dgo. This sentence containsevery letter of the aophabet andi s commonly used for tedtng pjrposes. |
+| 0.07 | Tje quickkbrpwn foxqjumps over the lazy dkg. This sentence contains wevery letter of the aplhabt andgis commonly used for tetslng prposds. |
+| 0.08 | Tje quickkbrpwn foxjumps over the lazy dolg.vThis sentence contains wevery letter of the aplhabt andgis commonly used for tetslng prposds. |
+| 0.09 | Tbe quifkrbrkwn foxhjumps over the lazy dg. oThis sentence containsvevery letter of the alpphabte andis commonly used for tewtnig pkrpsds. |
+| 0.10 | Tye quikcbriwn foxujumps oiger the lazy dkg.hThis sentence containsqevery letter of the slpphabte andis commonly used for tewtnig pkrpsds. |
+
+### Full range (0.0 to 1.0)
+
+| Strength | Output |
+|----------|--------|
+| 0.0 | The quick brown fox jumps over the lazy dog. This sentence contains every letter of the alphabet and is commonly used for testing purposes. |
+| 0.1 | Tye quikcbriwn foxujumps oiger the lazy dkg.hThis sentence containsqevery letter of the slpphabte andis commonly used for tewtnig pkrpsds. |
+| 0.2 | Teh quivk lbrinw foxpjumpls pber the lazy dpg.T tis sentendehcontainsrevery letter of the sohabedt andvis comnmonly sued fr tewtnig pkrpsds. |
+| 0.3 | Tbzequikarlsn ofxjums ifer the lazy diyegRbus smetencxedcontaines vgefry lettrf pf teh qiohabft andkis fonmonlg uhse dfr tewtnig pkrpsds. |
+| 0.5 | Tgsquicxkj bhropqn roxqjunls boifer thejlazy dlzgRksptsenecrdontainhsrbrryl strfe okf reh zlkohanr tandis donmjpnlg ise folr teztfnig rplds. |
+| 0.7 | Fdhq ixukvgopqjvfgoixrjismpge tetiazsyvdkvkHtld hqhetfmxe rdobginwdwrykdtct  hehhwkoahvw tznd liqv oljkpnlbyyseertprtedztfnig rplds. |
+| 1.0 | Rnfhqofjg epbw fxhkpmlwdovehnrdkzzskyldigbTjd ewrfenfrfwoohysbsgsifhtywtivsfhjwjzktndutnlhsfljkmhhl lydsee srltr erzylbtqluhprfsp |
+
 ---
 
 ## 1. Package Goals
